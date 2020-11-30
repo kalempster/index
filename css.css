@@ -135,3 +135,12 @@ a {
     width: 130px;
     height: 130px;
 }
+
+.photo {
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+.photosText {
+    font-size: 48px;
+}
