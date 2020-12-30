@@ -40,7 +40,7 @@
     <div class="bg-wrapper" id="home">
         <nav role="navigation" class="container">
             <ul class="group">
-                <li data-aos="fade-down" data-aos-duration="1000" id="name" class="aos-init "><a href="#">CallMePeter</a></li>
+                <li data-aos="fade-down" data-aos-duration="1000" id="name" class="aos-init"><a href="#">CallMePeter</a></li>
                 <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" class="aos-init "><a href="#contact">Contact</a></li>
                 <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600" class="aos-init "><a href="#portfolio">Past works</a>
                 </li>
@@ -50,9 +50,9 @@
             </ul>
         </nav>
         <section class="container main">
-            <h1 data-aos="fade-right" data-aos-duration="1000" class="aos-init ">CallMePeter</h1>
+            <h1 data-aos="fade-right" data-aos-duration="1000" id="title" class="aos-init">CallMePeter</h1>
             <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="aos-init ">Building your dreams in <span id="changer">JavaScript</span></h2>
-            <a data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" class="button aos-init " href="#" style="margin-top: 25px;">Get in Touch</a>
+            <a data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" class="button aos-init " href="#contact" style="margin-top: 25px;">Get in Touch</a>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="scroll-down aos-init ">
                 <a href="#about">Scroll down</a>
                 <i class="fas fa-sort-down" aria-hidden="true"></i>
@@ -63,8 +63,8 @@
         <section class="container about">
             <h1 data-aos="fade-right" data-aos-duration="1000" class="aos-init ">About Me</h1>
             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="aos-init ">
-                Hey I'm Peter! I'm living in Poland and I'm passionate about programming. Currently my favorite language is JavaScript, then Java and C#. I'm a bot developer at <a href="https://senior-studios.com"><u>Senior Studios</u></a>. And... Don't
-                CallMePeter, just call me Peter 😎.
+                Hey I'm Peter! I'm living in Poland and I'm passionate about programming. Currently my favorite language is JavaScript, then Java and C#. I'm a bot developer at <a href="https://senior-studios.com" target="_blank"><u>Senior Studios</u></a>.
+                And... Don't CallMePeter, just call me Peter 😎.
             </p>
         </section>
     </div>
@@ -88,9 +88,7 @@
 
 
                 <a href="https://discord.com/oauth2/authorize?client_id=722953822456250478&scope=bot&permissions=8" target="_blank"> <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" src="https://braumobot.site/braum.png" alt="" class="aos-init "></a><br>
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="aos-init">Braumobot is a discord bot created for the community! Braumobot sends request to Riot's servers to get you mastery, your account information like rank, league points, your profile name and icon and even your last match he will also get
-                    you through every region of Runeterra starting from freezing cold Freljord, going through brutal Noxus and finishing on balanced Ionia. He currently talks in two languages.
-                </p>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="aos-init">Braumobot is a discord bot created for the community! Braumobot gets info about champions, basic info about players, displays your mastery and more!</p>
 
 
 
@@ -103,19 +101,20 @@
                 <div class="container">
                     <section class="pre-footer group">
                         <h1 class="float-left aos-init " data-aos="fade-right" data-aos-duration="1000">Get in touch and let me do my magic.</h1>
-                        <a href="#" class="float-right button aos-init " data-aos="fade-left" data-aos-duration="1000">Contact me</a>
+                        <a onclick="copyDiscord()" class="float-right button aos-init " data-aos="fade-left" data-aos-duration="1000">Contact me</a>
                     </section>
                 </div>
             </div>
         </div>
     </section>
+    <div id="copy"></div>
 
     <div class="footer-wrapper">
         <footer class="container">
             <a href="#">© CallMePeter</a>
         </footer>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
             once: true
@@ -164,7 +163,55 @@
                 text: "C#",
             }, "+=1.5");
     </script>
+    <script>
+        window.onresize = () => {
+            if (window.screen.width < 720) {
+                let titel = document.getElementById("title");
+                titel.innerHTML = "Call<br>Me<br>Peter"
+            } else {
+                let titel = document.getElementById("title");
+                titel.innerHTML = "CallMePeter"
+            }
+        }
+    </script>
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText("CallMePeter#1234");
+            let div = document.getElementById("copy");
+            if (div.hasAttribute("data-aos") && div.hasAttribute("data-aos-duration")) {
+                div.attributes.removeNamedItem("data-aos");
+                div.attributes.removeNamedItem("data-aos-duration");
+                if (div.classList.contains("aos-init") && div.classList.contains("aos-animate")) {
+                    div.classList.remove("aos-init", "aos-animate");
+                }
+            }
+            div.style.display = "block";
+            div.style.width = "100%";
+            div.style.height = "100vh";
+            div.style.position = "fixed";
+            div.style.top = "0";
+            div.style.left = "0";
+            if (window.screen.width < 720) {
+                div.innerHTML = "<img src=\"./img/discord-small.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
 
+            } else {
+                div.innerHTML = "<img src=\"./img/discord.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+
+            }
+            //<p id=\"copiedText\" style=\"position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); font-size: 47px; font-family: Poppins, sans-serif; font-weight: 700;  margin: 0;\"> Copied! </p>
+            setTimeout(() => {
+                div.setAttribute("data-aos", "zoom-in");
+                div.setAttribute("data-aos-duration", "1000");
+                setTimeout(() => {
+                    div.style.display = "none";
+                }, 1000);
+            }, 1000);
+
+
+
+
+        }
+    </script>
     <div>
         <script>
             var images = new Array()
@@ -177,9 +224,7 @@
             }
             preload(
                 "./img/Blackjack.png",
-                "./img/spinme.gif",
-				"./img/plugins.png",
-				"./img/poro.jpg"
+                "./img/spinme.gif"
             )
         </script>
     </div>
