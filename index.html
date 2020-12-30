@@ -175,6 +175,8 @@
         }
     </script>
     <script>
+        let counter = 0;
+
         function copyDiscord() {
             navigator.clipboard.writeText("CallMePeter#1234");
             let div = document.getElementById("copy");
@@ -192,11 +194,89 @@
             div.style.top = "0";
             div.style.left = "0";
             if (window.screen.width < 720) {
-                div.innerHTML = "<img src=\"./img/discord-small.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                switch (counter) {
+                    case 0:
+                        div.innerHTML = "<img src=\"./img/discord-small.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
 
+                    case 1:
+                        div.innerHTML = "<img src=\"./img/discord-small-double.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 2:
+                        div.innerHTML = "<img src=\"./img/discord-small-triple.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 3:
+                        div.innerHTML = "<img src=\"./img/discord-small-dominating.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 4:
+                        div.innerHTML = "<img src=\"./img/discord-small-rampage.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 5:
+                        div.innerHTML = "<img src=\"./img/discord-small-mega.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 6:
+                        div.innerHTML = "<img src=\"./img/discord-small-unst.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 7:
+                        div.innerHTML = "<img src=\"./img/discord-small-ws.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 8:
+                        div.innerHTML = "<img src=\"./img/discord-small-monster.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 9:
+                        div.innerHTML = "<img src=\"./img/discord-small-godlike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
+
+                        break;
+                    case 10:
+                        div.innerHTML = "<img src=\"./img/discord-small-blike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
+
+                        break;
+                    default:
+                        break;
+                }
+                counter++;
             } else {
-                div.innerHTML = "<img src=\"./img/discord.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                switch (counter) {
+                    case 0:
+                        div.innerHTML = "<img src=\"./img/discord.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
 
+                    case 1:
+                        div.innerHTML = "<img src=\"./img/discord-double.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 2:
+                        div.innerHTML = "<img src=\"./img/discord-triple.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 3:
+                        div.innerHTML = "<img src=\"./img/discord-dominating.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 4:
+                        div.innerHTML = "<img src=\"./img/discord-rampage.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 5:
+                        div.innerHTML = "<img src=\"./img/discord-mega.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 6:
+                        div.innerHTML = "<img src=\"./img/discord-unst.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 7:
+                        div.innerHTML = "<img src=\"./img/discord-ws.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 8:
+                        div.innerHTML = "<img src=\"./img/discord-monster.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+                        break;
+                    case 9:
+                        div.innerHTML = "<img src=\"./img/discord-godlike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
+
+                        break;
+                    case 10:
+                        div.innerHTML = "<img src=\"./img/discord-blike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
+
+                        break;
+                    default:
+                        break;
+                }
+                counter++;
             }
             //<p id=\"copiedText\" style=\"position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); font-size: 47px; font-family: Poppins, sans-serif; font-weight: 700;  margin: 0;\"> Copied! </p>
             setTimeout(() => {
@@ -228,7 +308,28 @@
                 "./img/poro.jpg",
                 "./img/plugins.png",
                 "./img/discord.png",
-                "./img/discord-small.png"
+                "./img/discord-double.png",
+                "./img/discord-triple.png",
+                "./img/discord-dominating.png",
+                "./img/discord-rampage.png",
+                "./img/discord-mega.png",
+                "./img/discord-unst.png",
+                "./img/discord-ws.png",
+                "./img/discord-monster.png",
+                "./img/discord-godlike.png",
+                "./img/discord-blike.png",
+                "./img/discord-small.png",
+                "./img/discord-small-double.png",
+                "./img/discord-small-triple.png",
+                "./img/discord-small-dominating.png",
+                "./img/discord-small-rampage.png",
+                "./img/discord-small-mega.png",
+                "./img/discord-small-unst.png",
+                "./img/discord-small-ws.png",
+                "./img/discord-small-monster.png",
+                "./img/discord-small-godlike.png",
+                "./img/discord-small-blike.png"
+
             )
         </script>
     </div>

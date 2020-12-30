@@ -467,3 +467,50 @@ footer {
         width: 100%
     }
 }
+
+@keyframes shake {
+    0% {
+        position: absolute;
+        transform: translate(1px, 1px)
+    }
+    10% {
+        position: absolute;
+        transform: translate(-1px, -2px)
+    }
+    20% {
+        position: absolute;
+        transform: translate(-3px, 0px)
+    }
+    30% {
+        position: absolute;
+        transform: translate(3px, 2px)
+    }
+    40% {
+        position: absolute;
+        transform: translate(1px, -1px)
+    }
+    50% {
+        position: absolute;
+        transform: translate(-1px, 2px)
+    }
+    60% {
+        position: absolute;
+        transform: translate(-3px, 1px)
+    }
+    70% {
+        position: absolute;
+        transform: translate(3px, 1px)
+    }
+    80% {
+        position: absolute;
+        transform: translate(-1px, -1px)
+    }
+    90% {
+        position: absolute;
+        transform: translate(1px, 2px)
+    }
+    100% {
+        position: absolute;
+        transform: translate(1px, -2px)
+    }
+}
