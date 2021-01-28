@@ -7,6 +7,7 @@ body {
     transition: all 0.3s ease-in-out;
     color: #010611;
     overflow-x: hidden;
+    background-color: #000000;
 }
 
 *:focus {
@@ -66,11 +67,11 @@ body>div {
     animation: sweep 1s cubic-bezier(.22, 1, .36, 1) .2s forwards;
     bottom: 4px;
     height: 2rem;
-    background-color: #010611;
+    background-color: #ffffff;
 }
 
 a {
-    color: #010611;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -110,7 +111,7 @@ nav ul>li>a {
 }
 
 .button {
-    background: #010611;
+    background: #ffffff;
     font-size: 18px;
     padding: 15px 30px;
     border-radius: 8px;
@@ -120,7 +121,7 @@ nav ul>li>a {
 }
 
 .button:hover {
-    color: #fff;
+    color: #000;
     transition: .4s;
     cursor: pointer;
 }
@@ -141,7 +142,7 @@ nav ul>li>a {
 }
 
 .white-button:hover {
-    color: #010611;
+    color: #ffffff;
 }
 
 .bg-wrapper {
@@ -152,6 +153,7 @@ nav ul>li>a {
 }
 
 .main {
+    color: #ffffff;
     margin-top: 8%;
 }
 
@@ -207,7 +209,7 @@ nav ul>li>a {
 }
 
 .about h1 {
-    color: #010611;
+    color: #ffffff;
     font-size: 6em;
     margin-block: 0;
     margin-bottom: 30px;
@@ -215,6 +217,7 @@ nav ul>li>a {
 }
 
 .about p {
+    color: #ffffff;
     font-size: 1em;
     padding: 2em;
     line-height: 1.1em;
@@ -233,6 +236,7 @@ nav ul>li>a {
 }
 
 .portfolio-wrapper {
+    color: #ffffff;
     margin-top: 5%;
     background: url("../img/background-portfolio.png") no-repeat top center;
     z-index: -999;
@@ -248,22 +252,24 @@ nav ul>li>a {
 }
 
 .portfolio p {
+    color: #ffffff;
     font-size: 1em;
     padding: 1em;
     line-height: 1.1em;
-    color: #010611;
 }
 
 .portfolio-block {
+    color: #ffffff;
     width: 85%;
     margin: 0 auto;
-    background: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
+    background: black;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.16);
     border-radius: 8px;
     padding: 1em;
 }
 
 .portfolio-block ul {
+    color: #ffffff;
     list-style: none;
     margin: 0 auto;
     text-align: center;
@@ -271,13 +277,14 @@ nav ul>li>a {
 }
 
 .portfolio-block li {
+    color: #ffffff;
     display: inline-block;
     margin: 0 1.35em;
     padding: 1%;
 }
 
 .portfolio-block a {
-    color: #010611;
+    color: #ffffff;
     font-size: 1em;
     font-weight: 600;
 }
@@ -289,6 +296,7 @@ nav ul>li>a {
 }
 
 .portfolio-selected {
+    color: #ffffff;
     background: #ff7300;
     border-radius: 8px;
     transition-duration: 1s;
@@ -297,6 +305,7 @@ nav ul>li>a {
 }
 
 .portfolio-gallery {
+    color: #ffffff;
     width: 85%;
     margin: 0 auto;
     height: 80vh;
@@ -306,8 +315,8 @@ nav ul>li>a {
 }
 
 .portfolio-gallery p {
+    color: #ffffff;
     font-size: 1.3rem;
-    color: #010611;
     font-weight: 600;
 }
 
@@ -324,7 +333,7 @@ nav ul>li>a {
 }
 
 .pre-footer-warpper {
-    background: url("../img/mountains.jpg") center center no-repeat;
+    background: url("../img/moon.jpg") center center no-repeat;
     background-size: cover;
 }
 
@@ -403,7 +412,7 @@ footer {
     width: 8px;
     left: 4px;
     bottom: 3px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -417,9 +426,9 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(18px);
-    -ms-transform: translateX(18px);
-    transform: translateX(18px);
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
 }
 
 

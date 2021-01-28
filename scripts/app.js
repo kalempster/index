@@ -1,3 +1,5 @@
+checkMode();
+
 function applySelected(element, index) {
     let currentlySelected = document.getElementsByClassName("portfolio-selected");
     if (element.classList.contains("portfolio-selected")) return
@@ -11,4 +13,35 @@ function applySelected(element, index) {
     document.getElementsByClassName("portfolio-gallery")[0].innerHTML = elements[index].replace("\\", "");
 
 
+}
+
+function checkMode() {
+
+    if (document.cookie.split(";").indexOf("mode=dark") >= 0) {
+        let oldlink = document.getElementById("dark");
+        oldlink.rel = "stylesheet";
+        window.onload = () => {
+            let s = document.getElementById("switcher").checked = true;
+        }
+    } else {
+        document.cookie = "mode=light; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/"
+        let oldlink = document.getElementById("light");
+        oldlink.rel = "stylesheet";
+    }
+}
+
+function switchMode() {
+    if (document.cookie.split(";").indexOf("mode=dark")) {
+        let oldlink = document.getElementById("light");
+        oldlink.rel = "stylesheet alternate";
+        let newlink = document.getElementById("dark");
+        newlink.rel = "stylesheet";
+        document.cookie = "mode=dark; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/"
+    } else {
+        let oldlink = document.getElementById("dark");
+        oldlink.rel = "stylesheet alternate";
+        let newlink = document.getElementById("light");
+        newlink.rel = "stylesheet";
+        document.cookie = "mode=light; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/"
+    }
 }

@@ -24,13 +24,14 @@
     <meta property="twitter:description" content="I'm a passionate developer specializing in JavaScript, providing quality services since 2018.">
     <meta property="twitter:imag" content=" ">
     <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="https://kit.fontawesome.com/06bef5ea30.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet alternate" href="style/style-dark.css" id="dark">
+    <link rel="stylesheet alternate" href="style/style.css" id="light">
     <script src="scripts/app.js"></script>
+    <script defer src="https://kit.fontawesome.com/06bef5ea30.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <link defer href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -40,6 +41,13 @@
     <div class="bg-wrapper" id="home">
         <nav role="navigation" class="container">
             <ul class="group">
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" class="aos-init ">
+                    <label class="switch">
+                     <input id="switcher" type="checkbox" onclick="switchMode()">
+                    <span class="slider round"></span>
+                     </label>
+                    <img src="./img/moon-regular.svg" class="moon">
+                </li>
                 <li data-aos="fade-down" data-aos-duration="1000" id="name" class="aos-init"><a href="#">CallMePeter</a></li>
                 <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" class="aos-init "><a href="#contact">Contact</a></li>
                 <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600" class="aos-init "><a href="#portfolio">Past works</a>
@@ -47,6 +55,7 @@
                 <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" class="aos-init "><a href="#about">About me</a></li>
                 <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" class="aos-init "><a class="active" href="#home">Home</a>
                 </li>
+
             </ul>
         </nav>
         <section class="container main">
@@ -87,7 +96,7 @@
             <div class="portfolio-gallery">
 
 
-                <a href="https://discord.com/oauth2/authorize?client_id=722953822456250478&scope=bot&permissions=8" target="_blank"> <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" src="https://braumobot.site/braum.png" alt="" class="aos-init "></a><br>
+                <a href="https://discord.com/oauth2/authorize?client_id=722953822456250478&scope=bot&permissions=8" target="_blank"> <img width="220" height="220" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" src="https://braumobot.site/braum.png" alt="" class="aos-init "></a><br>
                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="aos-init">Braumobot is a discord bot created for the community! Braumobot gets info about champions, basic info about players, displays your mastery and more!</p>
 
 
@@ -115,7 +124,7 @@
         </footer>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+    <script defer>
         AOS.init({
             once: true
         })
@@ -163,7 +172,7 @@
                 text: "C#",
             }, "+=1.5");
     </script>
-    <script>
+    <script defer>
         window.onresize = () => {
             if (window.screen.width < 720) {
                 let titel = document.getElementById("title");
@@ -176,8 +185,10 @@
     </script>
     <script>
         let counter = 0;
+        let animating = false;
 
         function copyDiscord() {
+            if (animating) return;
             navigator.clipboard.writeText("CallMePeter#1234");
             let div = document.getElementById("copy");
             if (div.hasAttribute("data-aos") && div.hasAttribute("data-aos-duration")) {
@@ -279,11 +290,14 @@
                 counter++;
             }
             //<p id=\"copiedText\" style=\"position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); font-size: 47px; font-family: Poppins, sans-serif; font-weight: 700;  margin: 0;\"> Copied! </p>
+
+            animating = true;
             setTimeout(() => {
                 div.setAttribute("data-aos", "zoom-in");
                 div.setAttribute("data-aos-duration", "1000");
                 setTimeout(() => {
                     div.style.display = "none";
+                    animating = false;
                 }, 1000);
             }, 1000);
 
