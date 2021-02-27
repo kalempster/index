@@ -121,6 +121,13 @@
     <div class="footer-wrapper">
         <footer class="container">
             <a href="#">© CallMePeter</a>
+            <div class="icons">
+                <img src="./img/twitter.svg" alt="" srcset="" width="20" height="20" class="icon noselect" onclick="location.href = 'https:\/\/twitter.com/_CallMePeter'">
+
+                <img src="./img/github.svg" alt="" srcset="" width="20" height="20" class="icon noselect" onclick="location.href = 'https:\/\/github.com/CallMePeter0'">
+
+
+            </div>
         </footer>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -173,6 +180,16 @@
             }, "+=1.5");
     </script>
     <script defer>
+        document.onreadystatechange = () => {
+            if (window.screen.width < 720) {
+                let titel = document.getElementById("title");
+                titel.innerHTML = "Call<br>Me<br>Peter"
+            } else {
+                let titel = document.getElementById("title");
+                titel.innerHTML = "CallMePeter"
+            }
+        }
+
         window.onresize = () => {
             if (window.screen.width < 720) {
                 let titel = document.getElementById("title");
