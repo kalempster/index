@@ -86,8 +86,8 @@
             <h1 data-aos="fade-right" data-aos-duration="1000" class="aos-init ">About Me</h1>
             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="aos-init ">
                 Hey I'm Peter! I'm living in Poland and I'm passionate about programming. Currently my favorite language
-                is JavaScript/TypeScript, then Java and C# (A bit of). I'm a bot developer at <a href="https://senior-studios.com"
-                    target="_blank"><u>Senior Studios</u></a>.
+                is JavaScript/TypeScript, then Java and C# (A bit of). I'm a bot developer at <a
+                    href="https://senior-studios.com" target="_blank"><u>Senior Studios</u></a>.
             </p>
         </section>
     </div>
@@ -108,7 +108,7 @@
                     <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
                         onclick="applySelected(this, 2)" class="aos-init "><a>BlackJake</a></li>
                     <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
-                        onclick="applySelected(this, 3)" class="aos-init "><a>Porobot</a></li>
+                        onclick="applySelected(this, 3)" class="aos-init "><a>discord.js-menu-buttons</a></li>
                     <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
                         onclick="applySelected(this, 4)" class="aos-init "><a>Minecraft Plugins</a></li>
                 </ul>
@@ -117,8 +117,8 @@
 
 
                 <a href="https://discord.com/oauth2/authorize?client_id=722953822456250478&scope=bot&permissions=8"
-                    target="_blank"> <img width="220" height="220" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="1000" src="https://braumobot.site/braum.png" alt="" class="aos-init "></a><br>
+                    target="_blank"> <img data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="1000" src="./img/braum.png" alt="" class="aos-init potrfolio-img"></a><br>
                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="aos-init">Braumobot is a
                     discord bot created for the community! Braumobot gets info about champions, basic info about
                     players, displays your mastery and more!</p>
@@ -149,7 +149,7 @@
             <a href="#">© kalempster</a>
             <div class="icons">
                 <img src="./img/twitter.svg" alt="" srcset="" width="20" height="20" class="icon noselect"
-                    onclick="location.href = 'https:\/\/twitter.com/_kalempster'">
+                    onclick="location.href = 'https:\/\/twitter.com/_CallMePeter'">
 
                 <img src="./img/github.svg" alt="" srcset="" width="20" height="20" class="icon noselect"
                     onclick="location.href = 'https:\/\/github.com/kalempster'">
@@ -211,11 +211,11 @@
             }, "+=1.5")
 
     </script>
-    <script defer>
+    <script>
         document.onreadystatechange = () => {
             if (window.screen.width < 720) {
-                let titel = document.getElementById("title");
-                titel.innerHTML = "kal<br>em<br>pster"
+                let title = document.getElementById("title");
+                title.innerHTML = "kal<br>em<br>pster"
             } else {
                 let titel = document.getElementById("title");
                 titel.innerHTML = "kalempster"
@@ -233,9 +233,7 @@
         }
     </script>
     <script>
-        let counter = 0;
         let animating = false;
-
         function copyDiscord() {
             if (animating) return;
             navigator.clipboard.writeText("kalempster#4863");
@@ -253,96 +251,15 @@
             div.style.position = "fixed";
             div.style.top = "0";
             div.style.left = "0";
-            if (window.screen.width < 720) {
-                switch (counter) {
-                    case 0:
-                        div.innerHTML = "<img src=\"./img/discord-small.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
+            if (window.screen.width < 720)
+                div.innerHTML = "<img src=\"./img/discord-small.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
+            else
+                div.innerHTML = "<img src=\"./img/discord.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
 
-                    case 1:
-                        div.innerHTML = "<img src=\"./img/discord-small-double.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 2:
-                        div.innerHTML = "<img src=\"./img/discord-small-triple.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 3:
-                        div.innerHTML = "<img src=\"./img/discord-small-dominating.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 4:
-                        div.innerHTML = "<img src=\"./img/discord-small-rampage.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 5:
-                        div.innerHTML = "<img src=\"./img/discord-small-mega.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 6:
-                        div.innerHTML = "<img src=\"./img/discord-small-unst.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 7:
-                        div.innerHTML = "<img src=\"./img/discord-small-ws.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 8:
-                        div.innerHTML = "<img src=\"./img/discord-small-monster.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 9:
-                        div.innerHTML = "<img src=\"./img/discord-small-godlike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
-
-                        break;
-                    case 10:
-                        div.innerHTML = "<img src=\"./img/discord-small-blike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
-
-                        break;
-                    default:
-                        break;
-                }
-                counter++;
-            } else {
-                switch (counter) {
-                    case 0:
-                        div.innerHTML = "<img src=\"./img/discord.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-
-                    case 1:
-                        div.innerHTML = "<img src=\"./img/discord-double.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 2:
-                        div.innerHTML = "<img src=\"./img/discord-triple.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 3:
-                        div.innerHTML = "<img src=\"./img/discord-dominating.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 4:
-                        div.innerHTML = "<img src=\"./img/discord-rampage.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 5:
-                        div.innerHTML = "<img src=\"./img/discord-mega.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 6:
-                        div.innerHTML = "<img src=\"./img/discord-unst.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 7:
-                        div.innerHTML = "<img src=\"./img/discord-ws.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 8:
-                        div.innerHTML = "<img src=\"./img/discord-monster.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\">"
-                        break;
-                    case 9:
-                        div.innerHTML = "<img src=\"./img/discord-godlike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
-
-                        break;
-                    case 10:
-                        div.innerHTML = "<img src=\"./img/discord-blike.png\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); \">"
-
-                        break;
-                    default:
-                        break;
-                }
-                counter++;
-            }
-            //<p id=\"copiedText\" style=\"position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); font-size: 47px; font-family: Poppins, sans-serif; font-weight: 700;  margin: 0;\"> Copied! </p>
 
             animating = true;
             setTimeout(() => {
-                div.setAttribute("data-aos", "zoom-in");
+                div.setAttribute("data-aos", "zoom-in"); //tbh I really don't know why this "zoom-in" zooms out but it looks pretty nice so I might aswell leave it
                 div.setAttribute("data-aos-duration", "1000");
                 setTimeout(() => {
                     div.style.display = "none";
@@ -355,14 +272,14 @@
 
         }
     </script>
-    <div>
+    
         <script>
-            var images = new Array()
+            let images = [];
 
             function preload() {
-                for (i = 0; i < preload.arguments.length; i++) {
-                    images[i] = new Image()
-                    images[i].src = preload.arguments[i]
+                for (let i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image();
+                    images[i].src = preload.arguments[i];
                 }
             }
             preload(
@@ -371,31 +288,12 @@
                 "./img/poro.jpg",
                 "./img/plugins.png",
                 "./img/discord.png",
-                "./img/discord-double.png",
-                "./img/discord-triple.png",
-                "./img/discord-dominating.png",
-                "./img/discord-rampage.png",
-                "./img/discord-mega.png",
-                "./img/discord-unst.png",
-                "./img/discord-ws.png",
-                "./img/discord-monster.png",
-                "./img/discord-godlike.png",
-                "./img/discord-blike.png",
                 "./img/discord-small.png",
-                "./img/discord-small-double.png",
-                "./img/discord-small-triple.png",
-                "./img/discord-small-dominating.png",
-                "./img/discord-small-rampage.png",
-                "./img/discord-small-mega.png",
-                "./img/discord-small-unst.png",
-                "./img/discord-small-ws.png",
-                "./img/discord-small-monster.png",
-                "./img/discord-small-godlike.png",
-                "./img/discord-small-blike.png"
-
+                "./img/braum.png",
+                "./img/btn.png"
             )
         </script>
-    </div>
+    
 
 </body>
 

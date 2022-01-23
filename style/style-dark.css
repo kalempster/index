@@ -321,11 +321,11 @@ nav ul>li>a {
 }
 
 .portfolio-gallery img {
-    width: 45%;
+    width: auto;
     display: inline-block;
     margin: 0 auto;
     padding: 1.5%;
-    height: auto;
+    height: 50%;
 }
 
 .portfolio-gallery img:hover {
@@ -462,6 +462,8 @@ input:checked+.slider:before {
     user-select: none;
 }
 
+
+
 @media screen and (max-width: 1037px) {
     .container {
         width: 85%;
@@ -498,7 +500,8 @@ input:checked+.slider:before {
         margin: 0 auto;
     }
     .portfolio-gallery img {
-        width: 100%;
+        height: 40%;
+        width: auto;
     }
     .pre-footer {
         width: 100%;
@@ -528,6 +531,10 @@ input:checked+.slider:before {
     .portfolio-block li {
         display: block;
         margin-bottom: 10px;
+    }
+    .portfolio-gallery img {
+        height: 35%;
+        width: auto;
     }
 }
 
