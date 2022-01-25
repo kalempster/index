@@ -9,12 +9,28 @@ body {
     overflow-x: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(160, 160, 160);
+}
+
 *:focus {
     outline-color: #010611;
 }
 
 body>div {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ::-moz-selection {
