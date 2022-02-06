@@ -396,6 +396,7 @@ footer {
     position: absolute;
     left: 70px;
     top: 22px;
+    filter: invert(1);
 }
 
 .switch {
@@ -478,7 +479,6 @@ input:checked+.slider:before {
     -ms-user-select: none;
     user-select: none;
 }
-
 
 
 @media screen and (max-width: 1037px) {

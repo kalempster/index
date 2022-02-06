@@ -20,16 +20,16 @@ function applySelected(element, index) {
 
 function checkMode() {
 
-    if (document.cookie.split(";").indexOf("mode=dark") >= 0) {
+    if (document.cookie.split(";").indexOf("mode=light") >= 0) {
+        let oldlink = document.getElementById("light");
+        oldlink.rel = "stylesheet";
+    } else {
+        document.cookie = "mode=dark; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/"
         let oldlink = document.getElementById("dark");
         oldlink.rel = "stylesheet";
         window.onload = () => {
             let s = document.getElementById("switcher").checked = true;
         }
-    } else {
-        document.cookie = "mode=light; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/"
-        let oldlink = document.getElementById("light");
-        oldlink.rel = "stylesheet";
     }
 }
 
