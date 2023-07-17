@@ -1,8 +1,11 @@
+---
+import Nav from "../components/Nav.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>kalempster</title>
@@ -34,7 +37,10 @@
         <meta property="twitter:image" content=" " />
     </head>
     <body class="bg-black">
-        <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+            <Nav />
+        </div>
+        <div class="flex flex-col items-center gap-20">
             <slot />
         </div>
     </body>
