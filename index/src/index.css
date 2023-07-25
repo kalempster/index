@@ -5,4 +5,9 @@
 
 *{
     --nav-height: 4.25rem;
+
+}
+
+*::selection{
+    @apply bg-primary text-black
 }

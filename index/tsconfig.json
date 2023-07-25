@@ -1,7 +1,10 @@
 {
-  "extends": "astro/tsconfigs/strictest",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js"
-  }
+    "extends": "astro/tsconfigs/strictest",
+    "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "types": [
+            "vite-plugin-solid-svg/types"
+        ]
+    }
 }

@@ -3,11 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
 import "../index.css";
 import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
+import Projects from "../components/Projects";
 ---
 
 <Layout>
     <Main />
     <About />
-    <Projects />
+    <Projects client:visible />
 </Layout>
