@@ -7,8 +7,6 @@ async function fetchSVG(url: string) {
         const response = await fetch(url);
         return await response.text();
     } catch (error) {
-        console.log(error);
-
         return null;
     }
 }

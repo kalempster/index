@@ -9,6 +9,9 @@ module.exports = {
             height: {
                 nav: "var(--nav-height)",
             },
+            backgroundImage: {
+                "moon": "url('/src/moon.jpg')"
+            }
         },
     },
     plugins: [],

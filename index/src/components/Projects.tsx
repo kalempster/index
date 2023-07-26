@@ -1,7 +1,7 @@
 import { Component, For, createEffect, createSignal } from "solid-js";
 import { ProjectsButton } from "./ProjectsButton";
 import carboscan from "../carboscan.svg";
-import { Svg } from "../Svg";
+import { Svg } from "./Svg";
 const Projects = () => {
     const [currentlySelected, setCurrentlySelected] = createSignal<HTMLButtonElement>();
 
@@ -48,7 +48,7 @@ const Projects = () => {
 
     return (
 
-        <div class="w-[60%] flex flex-col items-start text-white gap-5" id="projects">
+        <div class="w-[60%] flex flex-col items-start text-white gap-5 my-32" id="projects">
             <div class="text-6xl font-bold text-primary">
                 I do cool stuff,&nbsp;
                 <span class="underline">sometimes</span>

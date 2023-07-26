@@ -1,4 +1,4 @@
-import { createEffect, type Setter } from "solid-js";
+import type { Setter } from "solid-js";
 
 export function ProjectsButton(props: {
     setCurrentlySelected: Setter<HTMLButtonElement | undefined>;
@@ -9,10 +9,6 @@ export function ProjectsButton(props: {
     text: string;
     onClick: () => any;
 }) {
-    createEffect(() => {
-        console.log(props.isInitial);
-    });
-
     return (
         <button
             ref={(el) => {
