@@ -10,7 +10,7 @@ module.exports = {
                 nav: "var(--nav-height)",
             },
             backgroundImage: {
-                "moon": "url('/src/moon.jpg')"
+                "moon": "url('/src/moon.avif')"
             }
         },
     },
