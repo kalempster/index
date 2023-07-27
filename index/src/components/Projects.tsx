@@ -1,40 +1,42 @@
 import { Component, For, createEffect, createSignal } from "solid-js";
 import { ProjectsButton } from "./ProjectsButton";
-import carboscan from "../carboscan.svg";
+import carboscan from "../assets/carboscan.svg";
 import { Svg } from "./Svg";
 const Projects = () => {
-    const [currentlySelected, setCurrentlySelected] = createSignal<HTMLButtonElement>();
+    const [currentlySelected, setCurrentlySelected] =
+        createSignal<HTMLButtonElement>();
 
-    const sections: { title: string; image: Component; description: string }[] = [
-        {
-            title: "carboscan",
-            image: () => <Svg url={carboscan} class="w-1/2" />,
-            description: `carboscan is an app specifically made to reduce the carbon footprint globally.
+    const sections: { title: string; image: Component; description: string }[] =
+        [
+            {
+                title: "carboscan",
+                image: () => <Svg url={carboscan} class="w-1/2" />,
+                description: `carboscan is an app specifically made to reduce the carbon footprint globally.
         It's purpose was to show what amount of carbon footprint do certain products
         produce, and showing their alternatives.`,
-        },
-        {
-            title: "carboscan",
-            image: () => <Svg url={carboscan} class="w-1/2" />,
-            description: `carboscan is an app specifically made to reduce the carbon footprint globally.
+            },
+            {
+                title: "carboscan",
+                image: () => <Svg url={carboscan} class="w-1/2" />,
+                description: `carboscan is an app specifically made to reduce the carbon footprint globally.
         It's purpose was to show what amount of carbon footprint do certain products
         produce, and showing their alternatives.`,
-        },
-        {
-            title: "carboscan",
-            image: () => <Svg url={carboscan} class="w-1/2" />,
-            description: `carboscan is an app specifically made to reduce the carbon footprint globally.
+            },
+            {
+                title: "carboscan",
+                image: () => <Svg url={carboscan} class="w-1/2" />,
+                description: `carboscan is an app specifically made to reduce the carbon footprint globally.
         It's purpose was to show what amount of carbon footprint do certain products
         produce, and showing their alternatives.`,
-        },
-        {
-            title: "carboscan",
-            image: () => <Svg url={carboscan} class="w-1/2" />,
-            description: `carboscan is an app specifically made to reduce the carbon footprint globally.
+            },
+            {
+                title: "carboscan",
+                image: () => <Svg url={carboscan} class="w-1/2" />,
+                description: `carboscan is an app specifically made to reduce the carbon footprint globally.
         It's purpose was to show what amount of carbon footprint do certain products
         produce, and showing their alternatives.`,
-        },
-    ];
+            },
+        ];
 
     const [currentItem, setCurrentItem] = createSignal<{
         title: string;
@@ -47,15 +49,18 @@ const Projects = () => {
     });
 
     return (
-
-        <div class="w-[60%] flex flex-col items-start text-white gap-5 my-32" id="projects">
+        <div
+            class="w-[60%] flex flex-col items-start text-white gap-5 my-32"
+            id="projects"
+        >
             <div class="text-6xl font-bold text-primary">
                 I do cool stuff,&nbsp;
                 <span class="underline">sometimes</span>
             </div>
             <div class="w-full flex justify-center">
                 <div class="w-[95%]">
-                    Here are some of my cool projects, check them out! Don't take my word for it.
+                    Here are some of my cool projects, check them out! Don't
+                    take my word for it.
                 </div>
             </div>
             <div class="w-full flex justify-center">

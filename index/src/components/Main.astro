@@ -2,21 +2,32 @@
 import { Icon } from "astro-icon";
 ---
 
-<div class="w-[60%] flex flex-col items-center justify-center h-[calc(100vh-var(--nav-height))]">
+<div
+    class="w-[60%] flex flex-col items-center justify-center h-[calc(100vh-var(--nav-height))]"
+>
     <div class="flex w-full flex-col h-[65%] justify-between">
         <div class="flex flex-col gap-14 items-start">
-            <div class="[-webkit-text-stroke:1px_#ff7300] text-8xl">kalempster</div>
+            <div class="[-webkit-text-stroke:1px_#ff7300] text-8xl">
+                kalempster
+            </div>
             <div class="text-5xl text-white">
-                Building your dreams with <span class="font-bold text-primary" id="text"></span>
+                Building your dreams with <span
+                    class="font-bold text-primary"
+                    id="text"></span>
             </div>
             <a
                 href="#contact"
-                class="bg-white text-lg text-primary py-3 px-[30px] rounded-lg font-bold">
+                class="bg-white text-lg text-primary py-3 px-[30px] rounded-lg font-bold"
+            >
                 Get in Touch</a
             >
         </div>
-        <span class="text-white w-full flex flex-col-reverse items-center gap-2">
-            <div class="w-12 aspect-square animate-bounce"><Icon name="ph:mouse-simple" /></div>
+        <span
+            class="text-white w-full flex flex-col-reverse items-center gap-2"
+        >
+            <div class="w-12 aspect-square animate-bounce">
+                <Icon name="ph:mouse-simple" />
+            </div>
         </span>
     </div>
 </div>
@@ -24,12 +35,11 @@ import { Icon } from "astro-icon";
 <script>
     const wait = (ms: number) =>
         new Promise<void>((res) => {
-            setTimeout(() => {
-                res();
-            }, ms);
+            setTimeout(res, ms);
         });
 
-    const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
+    const random = (min: number, max: number) =>
+        Math.floor(Math.random() * (max - min + 1) + min);
 
     const text = document.querySelector<HTMLSpanElement>("#text");
     let txt = [
@@ -42,24 +52,30 @@ import { Icon } from "astro-icon";
         "Prisma",
         "Postgres",
     ];
-    let speed = 150;
+    let speed = 100;
+
     await wait(500);
     while (1)
         for (const word of txt) {
+
             let currentWord = "";
+            //Writing loop
             for (const letter of word) {
                 if (currentWord == word) break;
 
                 currentWord += letter;
                 text!.innerText = currentWord;
-                await wait(random(speed - 50, 200));
+                await wait(random(speed - 50, speed + 50));
             }
+
             await wait(1000);
+
             const currentWordLength = currentWord.length;
+            //Removing text loop
             for (let index = 0; index < currentWordLength; index++) {
                 currentWord = currentWord.slice(0, currentWord.length - 1);
                 text!.innerText = currentWord;
-                console.log(currentWord);
+
                 if (index == 0) await wait(300);
                 await wait(50);
             }

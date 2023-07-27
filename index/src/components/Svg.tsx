@@ -11,7 +11,10 @@ async function fetchSVG(url: string) {
     }
 }
 
-export function Svg({ url, ...rest }: { url: string } & JSX.HTMLAttributes<HTMLDivElement>) {
+export function Svg({
+    url,
+    ...rest
+}: { url: string } & JSX.HTMLAttributes<HTMLDivElement>) {
     let [cachedSVG, setCachedSVG] = createSignal<string | null>(null);
 
     if (!svgCache[url]) {
@@ -24,5 +27,9 @@ export function Svg({ url, ...rest }: { url: string } & JSX.HTMLAttributes<HTMLD
     //Overriding typescript because we know the item exists based on the if above
     else setCachedSVG(svgCache[url]!);
 
-    return <div {...rest}>{cachedSVG() !== null ? <div innerHTML={cachedSVG()!} /> : <></>}</div>;
+    return (
+        <div {...rest}>
+            {cachedSVG() !== null ? <div innerHTML={cachedSVG()!} /> : <></>}
+        </div>
+    );
 }
