@@ -23,8 +23,7 @@ export function ProjectsButton(props: {
                 props.setCurrentlySelected(e.target as HTMLButtonElement);
                 props.onClick();
             }}
-            class="p-2 hover:bg-primary rounded-lg"
-        >
+            class="p-2 hover:bg-primary rounded-lg">
             {props.text}
         </button>
     );

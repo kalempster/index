@@ -1,5 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
+import Favicon from "../assets/favicon.ico";
+import kalempsterLogo from "../assets/kalempsterlogo.webp";
 ---
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ import Nav from "../components/Nav.astro";
             property="og:description"
             content="I'm a passionate developer specializing in TypeScript, providing quality services since 2018."
         />
-        <meta property="og:image" content="/src/assets/kalempsterlogo.webp" />
+        <meta property="og:image" content={kalempsterLogo} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="kalempster - Developer" />
 
@@ -34,13 +36,10 @@ import Nav from "../components/Nav.astro";
             property="twitter:description"
             content="I'm a passionate developer specializing in TypeScript, providing quality services since 2018."
         />
-        <meta
-            property="twitter:image"
-            content="/src/assets/kalempsterlogo.webp"
-        />
-        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+        <meta property="twitter:image" content={kalempsterLogo} />
+        <link rel="icon" type="image/x-icon" href={Favicon} />
     </head>
-    <body class="bg-black">
+    <body class="bg-black" data-aos-easing="ease">
         <div class="flex justify-center">
             <Nav />
         </div>
@@ -49,3 +48,11 @@ import Nav from "../components/Nav.astro";
         </div>
     </body>
 </html>
+
+<script>
+    import aos from "aos";
+    import "aos/dist/aos.css";
+    aos.init({
+        once: true
+    });
+</script>
