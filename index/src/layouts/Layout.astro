@@ -1,0 +1,58 @@
+---
+import Nav from "../components/Nav.astro";
+import Favicon from "../assets/favicon.ico";
+import kalempsterLogo from "../assets/kalempsterlogo.webp";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>kalempster</title>
+        <meta name="title" content="kalempster" />
+        <meta
+            name="description"
+            content="I'm a passionate developer specializing in JavaScript, providing quality services since 2018."
+        />
+        <meta name="theme-color" content="#ff7300" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kalempster.dev/" />
+        <meta property="og:title" content="kalempster" />
+        <meta
+            property="og:description"
+            content="I'm a passionate developer specializing in TypeScript, providing quality services since 2018."
+        />
+        <meta property="og:image" content={kalempsterLogo} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="kalempster - Developer" />
+
+        <meta property="twitter:title" content="kalempster" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://kalempster.dev/" />
+        <meta
+            property="twitter:description"
+            content="I'm a passionate developer specializing in TypeScript, providing quality services since 2018."
+        />
+        <meta property="twitter:image" content={kalempsterLogo} />
+        <link rel="icon" type="image/x-icon" href={Favicon} />
+    </head>
+    <body class="bg-black" data-aos-easing="ease">
+        <div class="flex justify-center">
+            <Nav />
+        </div>
+        <div class="flex flex-col items-center">
+            <slot />
+        </div>
+    </body>
+</html>
+
+<script>
+    import aos from "aos";
+    import "aos/dist/aos.css";
+    aos.init({
+        once: true
+    });
+</script>
