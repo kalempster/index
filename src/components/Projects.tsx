@@ -1,8 +1,7 @@
 import { Component, For, createEffect, createSignal } from "solid-js";
 import { ProjectsButton } from "./ProjectsButton";
-import carboscan from "../assets/carboscan.svg";
 import Pokeriniee from "../assets/Pokerinee.svg";
-import mpr from "../assets/mpr.png";
+import osds from "../assets/osds.svg";
 import npm from "../assets/1200px-Npm-logo.svg.png";
 
 import { Svg } from "./Svg";
@@ -17,25 +16,19 @@ const Projects = () => {
         url: string;
     }[] = [
         {
-            title: "carboscan",
-            image: () => <Svg url={carboscan} class="w-1/2" />,
-            description: `carboscan is an app specifically made to reduce the carbon footprint globally.
-        It's purpose was to show what amount of carbon footprint do certain products
-        produce, and showing their alternatives.`,
-            url: "https://github.com/kalempster/carboscan"
+            title: "osds",
+            image: () => <Svg url={osds} class="w-1/3" />,
+            description: `OSDS is a self-hosted donation management system that integrates Stripe for payments and ngrok for secure tunneling, designed to work seamlessly with OBS for live streamers.`,
+            url: "https://github.com/kalempster/osds"
         },
+       
         {
             title: "Pokeriniee",
             image: () => <Svg url={Pokeriniee} class="w-1/2" />,
             description: `Pokeriniee is a web app that simulates online poker with fake chips, it currently has implemented a auth system, accounts and fully featured lobbies.`,
-            url: "https://github.com/kalempster/pokerini"
+            url: "https://github.com/kalempster/pokerinee"
         },
-        {
-            title: "Mój przyjaciel robot",
-            image: () => <img src={mpr} alt="" class="h-full" />,
-            description: `Mój przyjaciel robot is an app that targets people with motivation loss and people who want to find a hobby. It displays different events that people can go to, scan a QR code and earn points which they can exchange for rewards.`,
-            url: "https://app.mojprzyjacielrobot.pl"
-        },
+       
         {
             title: "discord.js-menu-buttons",
             image: () => <img src={npm} alt="" class="h-full" />,
